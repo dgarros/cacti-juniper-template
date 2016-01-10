@@ -1,0 +1,64 @@
+<jnxOperatingTable>
+	<name>Get components Operating Information</name>
+	<oid_index>.1.3.6.1.4.1.2636.3.1.13.1.1</oid_index>
+	<oid_index_parse>OID/REGEXP:^.*\.([0-9]{0,8}\.[0-9]{0,3}\.[0-9]{0,3}\.[0-9]{0,3})$</oid_index_parse>	
+	<index_order_type>numeric</index_order_type>
+
+	<fields>
+		<index>
+			<name>Index</name>
+			<source>index</source>
+			<direction>input</direction>
+		</index>
+		<ContentsIndex>
+			<name>Content Index</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>input</direction>
+			<oid>.1.3.6.1.4.1.2636.3.1.13.1.1</oid>	
+		</ContentsIndex>
+	
+		<jnxOperatingDescr>
+			<name>Description</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>input</direction>
+			<oid>.1.3.6.1.4.1.2636.3.1.13.1.5</oid>
+		</jnxOperatingDescr>
+		<jnxOperatingState>
+			<name>Etat</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>input</direction>
+			<oid>.1.3.6.1.4.1.2636.3.1.13.1.6</oid>	
+		</jnxOperatingState>
+		<jnxOperatingTemp>
+			<name>Temperature</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>output</direction>
+			<oid>.1.3.6.1.4.1.2636.3.1.13.1.7</oid>
+		</jnxOperatingTemp>	
+		<jnxOperatingBuffer>
+			<name>Buffer utilisation</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>output</direction>
+			<oid>.1.3.6.1.4.1.2636.3.1.13.1.11</oid>		
+		</jnxOperatingBuffer>
+		<jnxOperatingHeap>
+			<name>Heap utilisation</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>output</direction>
+			<oid>.1.3.6.1.4.1.2636.3.1.13.1.12</oid>		
+		</jnxOperatingHeap>
+		<jnxOperatingCPU>
+			<name>CPU utilisation</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>output</direction>
+			<oid>.1.3.6.1.4.1.2636.3.1.13.1.8</oid>
+		</jnxOperatingCPU>
+	</fields>
+</jnxOperatingTable>
